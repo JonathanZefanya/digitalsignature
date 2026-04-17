@@ -4,7 +4,7 @@ import * as PDFLib from 'pdf-lib-plus-encrypt';
 
 // Set up the worker for PDF.js
 // Using .js extension from public folder for server MIME type compatibility
-pdfjsLib.GlobalWorkerOptions.workerSrc = '/pdf.worker.min.js';
+pdfjsLib.GlobalWorkerOptions.workerSrc = import.meta.env.BASE_URL + 'pdf.worker.min.js';
 
 // Expose libraries globally for other modules
 window.pdfjsLib = pdfjsLib as typeof window.pdfjsLib;
