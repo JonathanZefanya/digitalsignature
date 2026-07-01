@@ -27,7 +27,7 @@ import {
   ReplaceFileModal,
   PasswordModal,
   RemovePasswordModal,
-  ShareModal,
+  // ShareModal,
 } from '@/features/pdf-editor';
 import { PasswordInputModal } from '@/components/PasswordInputModal';
 
@@ -78,11 +78,11 @@ export const EditorPage: React.FC = () => {
   const { isOpen: isSidebarOpen, closeSidebar } = useSidebar();
 
   // --- Share Modal State ---
-  const {
-    isOpen: isShareModalOpen,
-    closeModal: closeShareModal,
-    triggerAfterSave,
-  } = useShareModal();
+  // const {
+  //   isOpen: isShareModalOpen,
+  //   closeModal: closeShareModal,
+  //   triggerAfterSave,
+  // } = useShareModal();
 
   // --- Close sidebar on unmount (page navigation) ---
   useEffect(() => {
@@ -388,7 +388,7 @@ export const EditorPage: React.FC = () => {
         downloadBlob(blob, `DigitalSignature_${filename}.pdf`);
         setIsFilenameModalOpen(false);
         setPendingSaveType(null);
-        triggerAfterSave();
+        // triggerAfterSave();
       } catch (err) {
         console.error('Save error:', err);
         setError('Gagal menyimpan PDF.');
@@ -405,7 +405,7 @@ export const EditorPage: React.FC = () => {
       pdfDoc,
       numPages,
       openPassword,
-      triggerAfterSave,
+      // triggerAfterSave,
     ]
   );
 
@@ -447,7 +447,7 @@ export const EditorPage: React.FC = () => {
         setIsFilenameModalOpen(false);
         setPendingSaveType(null);
         setPendingPassword(null);
-        triggerAfterSave();
+        // triggerAfterSave();
       } catch (err) {
         console.error('Save error:', err);
         setError('Gagal menyimpan PDF dengan password.');
@@ -464,7 +464,7 @@ export const EditorPage: React.FC = () => {
       pdfDoc,
       numPages,
       pendingPassword,
-      triggerAfterSave,
+      // triggerAfterSave,
     ]
   );
 
@@ -499,7 +499,7 @@ export const EditorPage: React.FC = () => {
         downloadBlob(blob, `DigitalSignature_${filename}.pdf`);
         setIsFilenameModalOpen(false);
         setPendingSaveType(null);
-        triggerAfterSave();
+        // triggerAfterSave();
       } catch (err) {
         console.error('Save error:', err);
         setError('Gagal menyimpan PDF.');
@@ -515,7 +515,7 @@ export const EditorPage: React.FC = () => {
       zoomLevel,
       pdfDoc,
       numPages,
-      triggerAfterSave,
+      // triggerAfterSave,
     ]
   );
 
@@ -865,7 +865,7 @@ export const EditorPage: React.FC = () => {
       />
 
       {/* Share modal - shown after first save */}
-      <ShareModal isOpen={isShareModalOpen} onClose={closeShareModal} />
+      {/* <ShareModal isOpen={isShareModalOpen} onClose={closeShareModal} /> */}
 
       {/* Hidden file input for replace file */}
       <input

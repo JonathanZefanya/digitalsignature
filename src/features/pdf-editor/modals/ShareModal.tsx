@@ -8,7 +8,7 @@ interface ShareModalProps {
   onClose: () => void;
 }
 
-const SHARE_URL = 'https://digitalsignature.com';
+const SHARE_URL = 'https://digitalsignature.vercel.app/';
 const SHARE_TEXT =
   'DigitalSignature - Tanda tangan digital PDF yang aman & privat. Semua proses berjalan offline di browser, jadi dokumenmu tetap aman!';
 
