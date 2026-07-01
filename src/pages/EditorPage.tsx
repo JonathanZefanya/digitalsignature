@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 // Hooks
-import { usePdfRenderer, useSignaturePad, useDragResize, useOpenPdf, useShareModal } from '@/hooks';
+import { usePdfRenderer, useSignaturePad, useDragResize, useOpenPdf } from '@/hooks';
 
 // Utils
 import { getItemImage, savePdfWithItems, downloadBlob } from '@/utils';
